@@ -1,4 +1,13 @@
 <?php
-$toto = "Ceci est une chaîne débile";
 
-echo $toto;
+include "./includes/header.php";
+
+
+
+
+
+
+
+
+
+include "./includes/footer.php";
