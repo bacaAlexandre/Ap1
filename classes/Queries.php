@@ -21,7 +21,13 @@ class Queries
     }
 
     public function insert($sql){
-        return $this -> db -> exec();
+        return $this -> db -> exec($sql);
+    }
+    public function select($sql){
+        return $this -> db -> query($sql);
+    }
+    public function lastId(){
+        return $this->db->lastInsertId();
     }
 
     public function __destruct()
