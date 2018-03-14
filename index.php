@@ -1,4 +1,5 @@
 <?php
+session_start();
 ini_set("smtp_port",1025);
 
 date_default_timezone_set("Europe/Paris");
