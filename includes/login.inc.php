@@ -18,7 +18,7 @@ Formulaire::formulaireCreated($array, $form);
 
 if(isset($_POST['mail']) && $_POST['mail'] != "" && isset($_POST['password']) && $_POST['password']){
     if(Login::checkLogin($_POST['mail'], $_POST['password'])){
-        Redirection::redirect('index.php?page=home');
+        Redirection::redirect('home');
     }else{
         echo "Erreur";
     }
