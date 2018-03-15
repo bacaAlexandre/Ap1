@@ -5,10 +5,12 @@ class Formulaire
 {
     public static function formulaireCreated($array, $form){
         $reponse = "<form  action=".$form['action']." method=".$form['methode'].">";
-        foreach ($array as $data){
+        foreach ($array as $data) {
             $reponse .= "<div >";
-            if($data['type'] == "submit"){
-                $reponse .= "<input name='".$data['name']."'type='".$data['type']."' value='".$data['value']."'/>";
+            if ($data['type'] == "submit") {
+                $reponse .= "<input name='" . $data['name'] . "'type='" . $data['type'] . "' value='" . $data['value'] . "'/>";
+            }elseif($data['type'] == "textarea"){
+                $reponse .= "<textarea name='" . $data['name'] . "'type='" . $data['type'] . "'>".$data['value']. "</textarea>";
             }else{
                 $reponse .= "<label for= '".$data['name']."' >";
                 $reponse .= $data['nomChamp'];
